@@ -1,0 +1,24 @@
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | 마음검진
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+        script(src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js")
+    body
+        header
+        include ./partials/header.pug
+
+        main
+          block content
+          button#savePdf(type="button") pdf
+          script
+            include ../generatePdf.js
+          include ./partials/footer.pug
+
+
+
+//- pdf 반환은 여기서 이루어져야할 것 같다. chartjs의 경우를 겪어보니.
+//- 근데 완전 기능이니까, js를 구성하고 이것을 불러오는 것도..?
+//- => button을 생성하는 것이 가장 좋은 방법일 듯.
+//-

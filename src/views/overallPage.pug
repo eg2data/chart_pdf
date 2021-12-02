@@ -1,0 +1,10 @@
+extends base.pug
+
+block content
+    include ./partials/chartPage.pug
+
+
+//- pdf 출력 옵션이 존재해야하지 않을까?
+//- => 전체출력(overallPage ~ devision3) / 일부출력(devision2 only)
+//- jsPDF는 어디서 돌아야할까.
+//- => generatePdf.js 에서 해당 pug를 import한 후 PDF로 출력한다!
